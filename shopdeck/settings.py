@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'test1'
+SECRET_KEY = 'somestring'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -126,8 +126,8 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Server URLS (dont include a trailing slash at the end)
-SOAP_URL = "ecs.c.shop.nintendowifi.net"
-METADATA_API_URL = "ninja.ctr.shop.nintendo.net"
+SOAP_URL = "soap.example.com"
+METADATA_API_URL = "api.example.com"
 
 # TOS
 TOS_ESHOP = "This is YOUR own custom shop!\nStart customizing it!\n(change this message in shopdeck/settings.py)"
