@@ -23,8 +23,9 @@ jobs:
              sudo apt-get install charles-proxy libnss3-tools &&
              brew install mkcert
       - name: set-up charles (currently uneeded)
-        run: cp .actions/charles/.config ~/ &&
-             cp .actions/charles/.charles ~/
+        run: rsync -av --exclude=.actions/charles/.config/* .actions/charles/.config/ ~/ &&
+             rsync -av --exclude=.actions/charles/.charles/* .actons/charles/.charles/ ~/
       - name: set-up shopdeck
         run: python -m pip install -r requirements.txt &&
+             
              
