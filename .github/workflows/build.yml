@@ -14,7 +14,7 @@ jobs:
         with:
           submodules: true
       - name: Install Dependencies
-        run: apt-key adv --keyserver gpg.mit.edu --recv-keys 1AD28806 &&
+        run: wget -q -O - https://www.charlesproxy.com/packages/apt/PublicKey | apt-key add - &&
              sh -c 'echo deb https://www.charlesproxy.com/packages/apt/ charles-proxy main > /etc/apt/sources.list.d/charles.list' &&
              apt-get update &&
              apt-get install charles-proxy &&
