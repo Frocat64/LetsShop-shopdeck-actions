@@ -14,11 +14,11 @@ jobs:
         with:
           submodules: true
       - name: Install Dependencies
-        run: wget -q -O - https://www.charlesproxy.com/packages/apt/PublicKey | apt-key add - &&
-             sh -c 'echo deb https://www.charlesproxy.com/packages/apt/ charles-proxy main > /etc/apt/sources.list.d/charles.list' &&
-             apt-get update &&
-             apt-get install charles-proxy &&
-             apt-get install libnss3-tools &&
+        run: wget -q -O - https://www.charlesproxy.com/packages/apt/PublicKey | sudo apt-key add - &&
+             sudo sh -c 'echo deb https://www.charlesproxy.com/packages/apt/ charles-proxy main > /etc/apt/sources.list.d/charles.list' &&
+             sudo apt-get update &&
+             sudo apt-get install charles-proxy &&
+             sudo apt-get install libnss3-tools &&
              brew install mkcert
       - name: Test
         run: charles --help
