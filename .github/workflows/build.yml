@@ -31,4 +31,4 @@ jobs:
              python manage.py makemigrations shopdeckdb &&
              python manage.py migrate &&
              mkcert 127.0.0.1 &&
-             python manage.py createsuperuser --username runner --email 65976911+Frocat64@users.noreply.github.com --password test123
+             python manage.py createsuperuser --noinput --username "runner" --email "65976911+Frocat64@users.noreply.github.com" --password "test123"
