@@ -30,19 +30,5 @@ jobs:
              python manage.py makemigrations &&
              python manage.py makemigrations shopdeckdb &&
              python manage.py migrate &&
-             cp -f .actions/shopdeck/127.0.0.1.pem ./ &&
-             cp -f .actions/shopdeck/127.0.0.1-key.pem ./
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-        
-        
-        
-        
+             mkcert 127.0.0.1 &&
+             python manage.py createsuperuser --username=runner --email=65976911+Frocat64@users.noreply.github.com --password=test123
